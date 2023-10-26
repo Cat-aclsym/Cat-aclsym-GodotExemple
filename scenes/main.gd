@@ -15,6 +15,7 @@ var player_scene: PackedScene = preload("res://scenes/player/player.tscn")
 
 
 func _ready() -> void:
+	Global.main = self
 	_spawn_player()
 
 

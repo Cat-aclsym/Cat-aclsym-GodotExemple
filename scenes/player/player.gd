@@ -18,17 +18,18 @@ const FRICTION: float = 0.15
 
 
 func _ready() -> void:
+	Global.player = self
 	camera.enabled = true
 
 
-func _physics_process(delta: float) -> void:
-	_movement_handler(delta)
+func _physics_process(_delta: float) -> void:
+	_movement_handler()
 
 
 # Handle PC movements and apply Walk aninimation
 # use facing direction, acceleration and friction
 # @see _get_direction()
-func _movement_handler(delta: float) -> void:
+func _movement_handler() -> void:
 	var direction: Vector2 = _get_direction()
 	
 	if (direction.length() > 0):
@@ -36,7 +37,7 @@ func _movement_handler(delta: float) -> void:
 	else:
 		velocity = lerp(velocity, Vector2.ZERO, FRICTION)
 	
-	move_and_slide()
+	move_and_slide() # move_and_slide handle delta time
 
 
 # Calcul PC facing direction
