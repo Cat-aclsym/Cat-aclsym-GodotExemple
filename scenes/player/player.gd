@@ -6,8 +6,8 @@ extends CharacterBody2D
 ## Author:	Benjamin Borello
 ## Created: 26/10/2023
 ##
-## This script is an functional exemple 
-## for basics player character movement.
+## This script is a functional exemple 
+## for basics player character movements.
 
 const MAX_SPEED: float = 650.0
 const ACCELERATION: float = 0.25
