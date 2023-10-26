@@ -38,6 +38,7 @@ var _redondant_type: Vector2 = Vector2(0, 1) # bad
 
 
 # Internals functions goes firsts
+
 # Constructor
 func _init() -> void:
 	pass
@@ -50,7 +51,9 @@ func _enter_tree() -> void:
 	
 # Called when node enters the scene tree for the first time.
 func _ready() -> void:
-	connect("my_signal", _on_Test_my_signal) # Link signal to callback function
+	# Limits raw codes in internal functions
+	# Call functions instead
+	_connect_signal()
 
 
 # Called every frame. '_delta' is the elapsed time since the previous frame.
@@ -58,19 +61,32 @@ func _process(_delta: float) -> void:
 	# Add a '_' to arguments name when you will not use them
 	pass
 
+
 # Then write publics functions
+
 func my_public_function() -> int:
 	return public_var_1
-	
+
 	
 # Then write privates functions
+
 func _my_private_function() -> void:
 	emit_signal("my_signal") # trigger signal callback
 	public_var_1 += 1
 
 
+func _connect_signal() -> void:
+	connect("my_signal", _on_Test_my_signal) # Link signal to callback function
+
+
+func _ternary_exemple() -> int:
+	# Ternaris are ok while they stay easu to read and understand
+	return 1 if (public_var_1 > 0) else 2
+
+
 # End with signal callback
-# Signal callback function are names like:
+
+# Signal callback function are named like:
 # 	_on_<NodeName>_<signal_name>() -> void:
 func _on_Test_my_signal() -> void:
 	print("my_signal has been trigered")
