@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1avtafjgnil3"]
+
+[ext_resource type="PackedScene" uid="uid://j857s3rg2ehr" path="res://scenes/map/obstacle/obstacle.tscn" id="1_ta5uc"]
+
+[node name="Map" type="Node2D"]
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="Obstacle" parent="Obstacles" instance=ExtResource("1_ta5uc")]
+
+[node name="Obstacle2" parent="Obstacles" instance=ExtResource("1_ta5uc")]
+position = Vector2(64, 128)
+rotation = 1.5708
+
+[node name="Obstacle7" parent="Obstacles" instance=ExtResource("1_ta5uc")]
+position = Vector2(128, 320)
+rotation = 1.5708
+
+[node name="Obstacle3" parent="Obstacles" instance=ExtResource("1_ta5uc")]
+position = Vector2(1088, 0)
+rotation = 1.5708
+
+[node name="Obstacle8" parent="Obstacles" instance=ExtResource("1_ta5uc")]
+position = Vector2(1152, 160)
+rotation = 1.5708
+
+[node name="Obstacle9" parent="Obstacles" instance=ExtResource("1_ta5uc")]
+position = Vector2(1088, 320)
+rotation = 1.5708
+
+[node name="Obstacle4" parent="Obstacles" instance=ExtResource("1_ta5uc")]
+position = Vector2(672, 416)
+rotation = 1.5708
+
+[node name="Obstacle5" parent="Obstacles" instance=ExtResource("1_ta5uc")]
+position = Vector2(352, 608)
+
+[node name="Obstacle10" parent="Obstacles" instance=ExtResource("1_ta5uc")]
+position = Vector2(832, 256)
+
+[node name="Obstacle11" parent="Obstacles" instance=ExtResource("1_ta5uc")]
+position = Vector2(640, 0)
+
+[node name="Obstacle6" parent="Obstacles" instance=ExtResource("1_ta5uc")]
+position = Vector2(256, 0)
