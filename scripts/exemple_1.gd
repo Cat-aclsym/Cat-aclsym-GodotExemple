@@ -20,14 +20,15 @@ enum MyEnum2 {
 	C, # Trailing coma if declaration on multiple line
 }
 
-# Consts in MAJ with _ to separates words
+# Consts in MAJ with '_' to separates words
 const MY_CONST: int = 69420
 
 # Every others shits goes in snake_case
 @export var my_exported_var: String = "Hello World!"
+@export_enum("White", "Yellow", "Orange") var my_color: String
 
 var public_var_1: int = 123
-var public_var_2: int
+var public_var_2: Array[String] = []
 
 var _private_var_1: int = 321
 var _private_var_2: int
@@ -87,6 +88,6 @@ func _ternary_exemple() -> int:
 # End with signal callback
 
 # Signal callback function are named like:
-# 	_on_<NodeName>_<signal_name>() -> void:
+# _on_<NodeName>_<signal_name>() -> void:
 func _on_Test_my_signal() -> void:
 	print("my_signal has been trigered")
