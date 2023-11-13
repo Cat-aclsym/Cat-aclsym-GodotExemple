@@ -1,13 +1,14 @@
-class_name Player
-extends CharacterBody2D
-
 ## File:	player/player.gd
+## Player script which allow basic movement
 ##
 ## Author:	Benjamin Borello
 ## Created: 26/10/2023
 ##
 ## This script is a functional exemple 
 ## for basics player character movements.
+class_name Player
+extends CharacterBody2D
+
 
 const MAX_SPEED: float = 650.0
 const ACCELERATION: float = 0.25

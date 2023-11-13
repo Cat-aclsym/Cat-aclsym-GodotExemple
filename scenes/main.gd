@@ -1,6 +1,5 @@
-extends Node2D
-
 ## File:	main.gd
+## Main scene script. Spawn player and will later allow scene management.
 ##
 ## Author:	Benjamin Borello
 ## Created: 26/10/2023
@@ -8,6 +7,7 @@ extends Node2D
 ## Main scene's script
 ## It's only goal is to show how to get object (player)
 ## and add it to scene through code.
+extends Node2D
 
 var player_scene: PackedScene = preload("res://scenes/player/player.tscn")
 
