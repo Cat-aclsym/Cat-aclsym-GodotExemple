@@ -46,6 +46,8 @@ func _movement_handler() -> void:
 func _get_direction() -> Vector2:
 	var d := Vector2.ZERO
 	
+	Input.is_action_pressed("move_down")
+	
 	d.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	d.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	
