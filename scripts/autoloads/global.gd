@@ -1,6 +1,7 @@
 ## File:	autoloads/global.gd
 ## Handle global variable.
 ## You should limit as much as possible to create global variables.
+## <!> Ask your referent before update this script please <!>
 ##
 ## Author:	Benjamin Borello
 ## Created: 26/10/2023
